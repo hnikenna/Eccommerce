@@ -18,8 +18,6 @@ var form = document.getElementById('form')
 form.addEventListener('submit', function(e){
     e.preventDefault()
     console.log('Form submitted...')
-//    var email = JSON.stringify(document.getElementById('form-email').value);
-//    console.log('Email2:', email)
     document.getElementById('form-button').classList.add('hidden')
     document.getElementById('payment-info').classList.remove('hidden')
 })
@@ -43,7 +41,7 @@ function makePayment() {
     tx_ref: order_id,
     amount: total,
     currency: "NGN",
-    payment_options: "card, mobilemoneyghana, ussd",
+    payment_options: "card",
 //    redirect_url: "/",
     meta: {
       consumer_id: 23,
